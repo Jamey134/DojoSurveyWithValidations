@@ -1,0 +1,42 @@
+@* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body> *@
+    @model StudentData
+    
+    <form asp-action="Process" asp-controller="Home" method="post">
+
+        <div> 
+                <label asp-for="Name">Your Name:</label>
+                <input type="text" asp-for="Name">
+            </div>
+            <div>
+                <label asp-for="Location">Dojo Location:</label>
+                <select asp-for="Location">
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="New York">New York</option>
+                </select>
+            </div>
+            <div>
+                <label asp-for="Language">Favorite Language:</label>
+                <select asp-for="Language">
+                    <option value="Python">Python</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="C#">C#</option>
+                    <option value="Java">Java</option>
+                </select>
+            </div>
+            <div>
+                <label asp-for="Comment">Comment:</label>
+                <textarea asp-for="Comment" rows="5" cols="30" placeholder="Optional"></textarea>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+    </form>

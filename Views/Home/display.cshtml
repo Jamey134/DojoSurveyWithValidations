@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission</title>
+</head>
+<body>
+    <div>
+    @model List<StudentData>
+    <h1>Student Info</h1>
+    <br/>
+    <div>
+        @foreach(StudentData student in Model) //<--- 
+        {
+            
+        }
+
+        @* <div>@ViewBag.Name</div>
+        <div>@ViewBag.Location</div>
+        <div>@ViewBag.Language</div>
+        <div>@ViewBag.Comment</div> *@
+    </div>
+    <br/>
+    <button><a href="/">Go back</a></button>
+    </div>
+</body>
+</html>
