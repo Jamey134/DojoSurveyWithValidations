@@ -25,22 +25,23 @@ public class HomeController : Controller
     public IActionResult Process(StudentData ShowStudent)
     {
 
-        // ViewBag.Name = Name;
-        // ViewBag.Location = Location;
-        // ViewBag.Language = Language;
-        // ViewBag.Comment = Comment;
+        ViewBag.Name = ShowStudent.Name;
+        ViewBag.Location = ShowStudent.Location;
+        ViewBag.Language = ShowStudent.Language;
+        ViewBag.Comment= ShowStudent.Comment;
 
-        AllStudents.Add(ShowStudent);
+        // AllStudents.Add(ShowStudent);
 
         // To return a view or a redirect
-        return RedirectToAction("Results");
+        return View("display");
     }
 
-    [HttpGet("results")]
-    public ViewResult Results()
-    {
-        return View("display", AllStudents); //<--- (Name of file to view, calling AllStudents)
-    }
+    // [HttpGet("results")]
+    // public ViewResult Results()
+    // {
+    //     ViewBag.Name = TempData["Name"];
+    //     return View("display", AllStudents); //<--- (Name of file to view, calling AllStudents)
+    // }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

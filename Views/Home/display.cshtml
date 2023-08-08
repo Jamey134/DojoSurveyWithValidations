@@ -11,15 +11,15 @@
     <h1>Student Info</h1>
     <br/>
     <div>
-        @foreach(StudentData student in Model) //<--- 
+        @* @foreach(StudentData student in Model) //<--- 
         {
-            
-        }
+            <p>@student.Name</p>
+        } *@
 
-        @* <div>@ViewBag.Name</div>
+        <div>@ViewBag.Name</div>
         <div>@ViewBag.Location</div>
         <div>@ViewBag.Language</div>
-        <div>@ViewBag.Comment</div> *@
+        <div>@ViewBag.Comment</div> 
     </div>
     <br/>
     <button><a href="/">Go back</a></button>
