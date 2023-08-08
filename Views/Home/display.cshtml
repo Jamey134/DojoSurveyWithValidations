@@ -7,7 +7,7 @@
 </head>
 <body>
     <div>
-    @model List<StudentData>
+    @model StudentData
     <h1>Student Info</h1>
     <br/>
     <div>
@@ -16,10 +16,10 @@
             <p>@student.Name</p>
         } *@
 
-        <div>@ViewBag.Name</div>
-        <div>@ViewBag.Location</div>
-        <div>@ViewBag.Language</div>
-        <div>@ViewBag.Comment</div> 
+        <div>@Model.Name</div> 
+        <div>@Model.Location</div>
+        <div>@Model.Language</div>
+        <div>@Model.Comment</div> 
     </div>
     <br/>
     <button><a href="/">Go back</a></button>

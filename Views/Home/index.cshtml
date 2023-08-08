@@ -11,10 +11,10 @@
     
     <form asp-action="Process" asp-controller="Home" method="post">
 
-        <div> 
-                <label asp-for="Name">Your Name:</label>
-                <input type="text" asp-for="Name">
-            </div>
+    <div class="text-center">
+            <label asp-for="Name">Your Name:</label>
+            <input type="text" asp-for="Name">
+            <span asp-validation-for = "Name"></span>
             <div>
                 <label asp-for="Location">Dojo Location:</label>
                 <select asp-for="Location">
@@ -23,6 +23,7 @@
                     <option value="New York">New York</option>
                     <option value="Boston">Boston</option>
                 </select>
+                <span asp-validation-for = "Location"></span>
             </div>
             <div>
                 <label asp-for="Language">Favorite Language:</label>
@@ -32,10 +33,12 @@
                     <option value="C#">C#</option>
                     <option value="Java">Java</option>
                 </select>
+                <span asp-validation-for = "Language"></span>
             </div>
             <div>
                 <label asp-for="Comment">Comment:</label>
                 <textarea asp-for="Comment" rows="5" cols="30" placeholder="Optional"></textarea>
+                <span asp-validation-for = "Comment"></span>
             </div>
             <div>
                 <button type="submit">Submit</button>
